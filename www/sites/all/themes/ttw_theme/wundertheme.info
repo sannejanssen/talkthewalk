@@ -1,0 +1,21 @@
+name = Wundertheme
+description = Drupal 7 starter theme by Wunderkraut Belgium
+screenshot = screenshot.png
+version = 2.0
+core = 7.x
+
+; --------------------------------------------------------------------------
+; Regions.
+; --------------------------------------------------------------------------
+regions[header] = Header
+regions[sidebar_first] = Sidebar first
+regions[content] = Content
+regions[sidebar_second] = Sidebar second
+regions[footer] = Footer
+
+;-------------- CSS -------------
+stylesheets[all][] = dist/css/main.css
+stylesheets[print][] = dist/css/print.css
+
+;-------------- js -------------
+scripts[] = dist/js/scripts.js
