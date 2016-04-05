@@ -73,6 +73,79 @@
  */
 ?>
 
+<div class="page">
+  <header>
+    <div class="outer-wrapper">
+      <?php if ($logo): ?>
+        <figure class="logo">
+          <?php if($is_front): ?>
+            <img width="303" height="182" src="<?php print $logo; ?>" alt="<?php print t('Talk The Walk homepage'); ?>" />
+          <?php else: ?>
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
+              <img width="303" height="182" src="<?php print $logo; ?>" alt="<?php print t('Talk The Walk homepage'); ?>" />
+            </a>
+          <?php endif; ?>
+        </figure>
+      <?php endif; ?>
+
+          <?php if($site_name OR $site_slogan ): ?>
+            <div class="site-name-slogan">
+              <?php if($site_name): ?>
+                <?php if($is_front): ?>
+                  <h1 class="site-name element-invisible"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a></h1>
+                <?php else : ?>
+                  <p class="site-name element-invisible"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a></p>
+                <?php endif; ?>
+              <?php endif; ?>
+              <?php if ($site_slogan): ?>
+                <p class="slogan"><?php print $site_slogan; ?></p>
+              <?php endif; ?>
+            </div>
+          <?php endif; ?>
+
+
+
+
+
+
+      <div class="language">LANGUAGE</div>
+      <div class="navigation">NAVIGATION</div>
+
+
+
+      
+
+
+
+
+      HEADER
+    </div>
+  </header>
+
+
+  <?php if ($messages): ?>
+    <section class="messages">
+      <div class="outer-wrapper">
+        <?php print $messages; ?>
+      </div>
+    </section>
+  <?php endif; ?>
+
+  <div>
+    <div class="outer-wrapper">
+      MAIN CONTENT
+    </div>
+  </div>
+
+  <footer>
+    <div class="outer-wrapper">
+      FOOTER
+    </div>
+  </footer>
+
+</div>
+
+
 <div role="document" class="page">
   <?php if (!empty($page['header'])): ?>
     <header id="site-header">
@@ -80,14 +153,6 @@
         <?php print render($page['header']); ?>
       </div>
     </header>
-  <?php endif; ?>
-
-  <?php if ($messages): ?>
-    <section id="messages">
-      <div class="outer-wrapper">
-        <?php print $messages; ?>
-      </div>
-    </section>
   <?php endif; ?>
 
   <?php if ($breadcrumb): ?>

@@ -78,6 +78,18 @@ function wundertheme_css_alter(&$css) {
 }
 
 /**
+ * Implements hook_preprocess_page().
+ */
+function wundertheme_preprocess_page(&$variables) {
+  // Replacing the png logo by svg logo.
+  if (!empty($variables['logo'])) {
+    $variables['logo'] = str_replace('.png', '.svg', $variables['logo']);
+  }
+}
+
+
+
+/**
  * Implements template_preprocess_button().
  *
  * @param $variables
