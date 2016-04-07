@@ -2,6 +2,10 @@
 [Typography]
 -------------------------------------------------------------------*/
 
+/**
+ * Body
+ */
+
 body {
   color: $base-font-color;
   font-family: $base-font-family;
@@ -9,7 +13,38 @@ body {
   line-height: $base-line-height;
 }
 
-// Headers
+
+/**
+ * Headers
+ */
+h1 {
+  color: $green;
+  font-weight: $light;
+  font-size: 48px;
+  line-height: 62px;
+}
+
+h2 {
+  color: $heading-font-color;
+  font-weight: $light;
+  font-size: 35px;
+  line-height: 48px;
+  margin: 20px 0 10px;
+}
+
+
+p {
+  margin: 20px 0;
+  font-weight: $normal;
+}
+
+
+
+
+
+
+/*
+
 h1,
 h2,
 h3,
@@ -22,17 +57,10 @@ h6 {
   margin: 0 0 $small-spacing;
 }
 
-// Header font sizes
-@for $i from 1 through 6 {
-  h#{$i} {
-    font-size: modular-scale((6 - $i), 1em, 1.2);
-  }
-}
 
-p {
-  margin: 0 0 $small-spacing;
-}
+*/
 
+/*
 a {
   color: $action-color;
   text-decoration: none;
@@ -44,7 +72,9 @@ a {
     color: shade($action-color, 25%);
   }
 }
+*/
 
+/*
 hr {
   border-bottom: $base-border;
   border-left: 0;
@@ -52,3 +82,4 @@ hr {
   border-top: 0;
   margin: $base-spacing 0;
 }
+*/

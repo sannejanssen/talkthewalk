@@ -8,8 +8,11 @@ core = 7.x
 ; Regions.
 ; --------------------------------------------------------------------------
 regions[header] = Header
-regions[content] = Content
-regions[footer] = Footer
+regions[language] = Language
+regions[navigation] = Navigation
+regions[content] = Main content
+regions[f] = Bottom menu
+regions[footer] = Bottom menu
 
 ;-------------- CSS -------------
 stylesheets[all][] = dist/css/main.css

@@ -47,6 +47,7 @@
 <head>
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600' rel='stylesheet' type='text/css'>
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>

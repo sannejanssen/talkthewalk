@@ -17,6 +17,27 @@ Contains basic html tags (eg. html, body, ul, p,...)
   }
 }
 
-figure {
-  margin: 0;
+
+/**
+ * Header
+ */
+header {
+  background-color: $green;
 }
+
+/**
+ * Footer
+ */
+footer {
+  background-color: $footer-brown;
+  color: white;
+}
+
+/**
+ * Main
+ */
+.main-content {
+  margin: 40px;
+}
+
+

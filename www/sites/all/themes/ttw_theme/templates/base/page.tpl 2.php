@@ -74,58 +74,137 @@
 ?>
 
 <div class="page">
-
   <header>
-    <div class="container">
-      <div class="language">LOGO</div>
+    <div class="outer-wrapper">
+      <?php if ($logo): ?>
+        <figure class="logo">
+          <?php if($is_front): ?>
+            <img width="303" height="182" src="<?php print $logo; ?>" alt="<?php print t('Talk The Walk homepage'); ?>" />
+          <?php else: ?>
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
+              <img width="303" height="182" src="<?php print $logo; ?>" alt="<?php print t('Talk The Walk homepage'); ?>" />
+            </a>
+          <?php endif; ?>
+        </figure>
+      <?php endif; ?>
+
+          <?php if($site_name OR $site_slogan ): ?>
+            <div class="site-name-slogan">
+              <?php if($site_name): ?>
+                <?php if($is_front): ?>
+                  <h1 class="site-name element-invisible"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a></h1>
+                <?php else : ?>
+                  <p class="site-name element-invisible"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a></p>
+                <?php endif; ?>
+              <?php endif; ?>
+              <?php if ($site_slogan): ?>
+                <p class="slogan"><?php print $site_slogan; ?></p>
+              <?php endif; ?>
+            </div>
+          <?php endif; ?>
+
+
+
+
+
+
       <div class="language">LANGUAGE</div>
-      <section class="navigation">NAVIGATION</section>
+      <div class="navigation">NAVIGATION</div>
+
+
+
+      
+
+
+
+
+      HEADER
     </div>
   </header>
 
 
   <?php if ($messages): ?>
     <section class="messages">
-      <div class="container">
+      <div class="outer-wrapper">
         <?php print $messages; ?>
       </div>
     </section>
   <?php endif; ?>
 
-  <section class="main-content">
-    <h1>H1 Talk the walk  The node object, if there is an automatically-loaded node associated with the page, and the node ID is the second argument</h1>
-    <p>B58 – Belgium 1958. Branded “Expo 58”, the 1958 World’s Fair in Brussels was the first of its kind after World War II, initiating an innovation boost that remains legendary even today. More than half a century after those course-changing days, we believe that our global society is again in need of truly inspirational, yet this tigme sustainable, growth trajectories.</p>
-    <h2>H2 More than half a century after those course-changing days, we believe that our global society is again in need of truly inspirational, yet this tigme sustainable, growth trajectories</h2>
-    <p>B58 – Belgium 1958. Branded “Expo 58”, the 1958 World’s Fair in Brussels was the first of its kind after World War II, initiating an innovation boost that remains legendary even today. More than half a century after those course-changing days, we believe that our global society is again in need of truly inspirational, yet this tigme sustainable, growth trajectories.</p>
-    <h3>Another title</h3>
-    <p>B58 – Belgium 1958. Branded “Expo 58”, the 1958 World’s Fair in Brussels was the first of its kind after World War II, initiating an innovation boost that remains legendary even today. More than half a century after those course-changing days, we believe that our global society is again in need of truly inspirational, yet this tigme sustainable, growth trajectories.</p>
-
-  </section>
-
-  <section class="main-content">
-    <?php print render($page['content']); ?>
-  </section>
+  <div>
+    <div class="outer-wrapper">
+      MAIN CONTENT
+    </div>
+  </div>
 
   <footer>
-    <div class="container">
-      <div class="language">LOGO</div>
-      <div class="language">SERVICES</div>
-      <section class="navigation">NAVIGATION</section>
+    <div class="outer-wrapper">
+      FOOTER
     </div>
-
   </footer>
 
 </div>
 
 
+<div role="document" class="page">
+  <?php if (!empty($page['header'])): ?>
+    <header id="site-header">
+      <div class="outer-wrapper">
+        <?php print render($page['header']); ?>
+      </div>
+    </header>
+  <?php endif; ?>
 
+  <?php if ($breadcrumb): ?>
+    <section id="breadcrumb">
+      <div class="outer-wrapper">
+        <?php print $breadcrumb; ?>
+      </div>
+    </section>
+  <?php endif; ?>
 
+  <main class="outer-wrapper">
+    <?php if (!empty($page['sidebar_first'])): ?>
+      <aside id="sidebar-first" role="complementary" class="sidebar">
+        <?php print render($page['sidebar_first']); ?>
+      </aside>
+    <?php endif; ?>
 
+    <section id="content">
+      <?php if ($title): ?>
+        <?php print render($title_prefix); ?>
+        <h1 id="page-title"><?php print $title; ?></h1>
+        <?php print render($title_suffix); ?>
+      <?php endif; ?>
 
+      <?php if (!empty($tabs)): ?>
+        <?php print render($tabs); ?>
+        <?php if (!empty($tabs2)): print render($tabs2); endif; ?>
+      <?php endif; ?>
 
+      <?php if ($action_links): ?>
+        <ul class="action-links">
+          <?php print render($action_links); ?>
+        </ul>
+      <?php endif; ?>
 
+      <?php print render($page['content']); ?>
+    </section>
 
+    <?php if (!empty($page['sidebar_second'])): ?>
+      <aside id="sidebar-second" role="complementary" class="sidebar">
+        <?php print render($page['sidebar_second']); ?>
+      </aside>
+    <?php endif; ?>
+  </main>
 
-
-
-
+  <?php if (!empty($page['footer'])): ?>
+    <footer id="site-footer">
+      <?php if (!empty($page[')'])): ?>
+        <section class="footer">
+          <?php print render($page[')']); ?>
+        </section>
+      <?php endif; ?>
+    </footer>
+  <?php endif; ?>
+</div>

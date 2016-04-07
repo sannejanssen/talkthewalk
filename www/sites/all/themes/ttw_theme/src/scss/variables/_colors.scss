@@ -3,14 +3,19 @@
 -------------------------------------------------------------------*/
 
 $colors: (
-  blue: #1565c0,
-  dark-gray: #333,
-  medium-gray: #999,
-  light-gray: #ddd,
-  lighter-gray: #efefef,
-  kraut: #e56716,
+  black:            #000000,
+  darkest-gray:     #2e2e2e,
+  dark-gray:        #333333,
+  brown:            #2e2e2e,
+  green:            #2aa3a5,
 );
 
 // Font Colors
 $base-font-color: map-get($colors, dark-gray);
-$action-color: map-get($colors, kraut);
+$heading-font-color: map-get($colors, darkest-gray);
+
+// Footer Brown
+$footer-brown: map-get($colors, brown);
+
+// Green
+$green: map-get($colors, green);
