@@ -1,0 +1,12 @@
+/**
+ * Intro
+ */
+
+%intro {
+  background-color: #fafafb;
+}
+
+.region-intro {
+  @extend %intro;
+  
+}

@@ -13,6 +13,7 @@ $plugin = array(
   'css' => 'ttw_twocol_stacked.css',
   'regions' => array(
     'top' => t('Top'),
+    'intro' => t('Intro'),
     'main' => t('Main'),
     'aside' => ('Sidebar'),
   ),

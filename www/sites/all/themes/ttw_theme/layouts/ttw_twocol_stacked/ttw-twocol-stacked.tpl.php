@@ -14,24 +14,39 @@
 ?>
 
 <div class="ttw-twocol">
-  <div class="region-top">
-    TOP
-    <?php if ($content['top']): ?>
-      <?php print $content['top']; ?>
-    <?php endif; ?>
-  </div>
 
-  <div class="region-main">
-    MAIN
-    <?php if ($content['main']): ?>
-      <?php print $content['main']; ?>
-    <?php endif; ?>
-  </div>
+  <?php if ($content['top']): ?>
+    <div class="region-top">
+      <div class="container">
+        <?php print $content['top']; ?>  
+      </div>
+    </div>
+  <?php endif; ?>
 
-  <div class="region-aside">
-    ASIDE
-    <?php if ($content['aside']): ?>
-      <?php print $content['aside']; ?>
-    <?php endif; ?>
-  </div>
+  <?php if ($content['intro']): ?>
+    <div class="region-intro">
+      <div class="container">
+        <?php print $content['intro']; ?>
+      </div>
+    </div>
+  <?php endif; ?>
+
+  <?php if ($content['aside'] || $content['main']) ?>
+    <div class="container">
+      <?php if ($content['aside']): ?>
+        <div class="region-main has-aside">
+      <?php else: ?>
+        <div class="region-main">
+      <?php endif; ?>    
+        <?php if ($content['main']): ?>
+          <?php print $content['main']; ?>
+        <?php endif; ?>
+      </div>
+
+      <?php if ($content['aside']): ?>
+        <div class="region-aside">
+          <?php print $content['aside']; ?>
+        </div>
+      <?php endif; ?>
+    </div>
 </div>

@@ -63,6 +63,7 @@ function wundertheme_css_alter(&$css) {
     'sites/all/modules/contrib/panels/css/panels.css' => FALSE,
     'sites/all/modules/contrib/views/css/views.css' => FALSE,
     'sites/all/modules/contrib/ctools/css/ctools.css' => FALSE,
+    'sites/all/themes/ttw_theme/layouts/ttw_twocol_stacked/ttw_twocol_stacked.css' => FALSE,
   ];
 
   $css = array_diff_key($css, $exclude);

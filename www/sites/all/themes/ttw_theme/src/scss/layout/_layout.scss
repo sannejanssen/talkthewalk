@@ -14,7 +14,7 @@ body {
 
 // Container example
 .container {
-  padding: 35px 15px;
+  padding: 15px;
 
   @include outer-container();
 
@@ -39,5 +39,24 @@ body {
 
   @include media($small) {
     padding: 3em 30px;
+  }
+}
+
+/**
+ * Twocol layout
+ */
+
+.ttw-twocol {
+  @include clearfix;
+
+  @include media($small) {
+    .region-main.has-aside {
+      @include span-columns(8);
+    }
+
+    .region-aside {
+      @include span-columns(4);
+      @include omega;
+    }
   }
 }

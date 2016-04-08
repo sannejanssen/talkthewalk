@@ -8,6 +8,7 @@ $colors: (
   dark-gray:        #333333,
   brown:            #2e2e2e,
   green:            #2aa3a5,
+  blue:             #00435D,
 );
 
 // Font Colors
@@ -19,3 +20,6 @@ $footer-brown: map-get($colors, brown);
 
 // Green
 $green: map-get($colors, green);
+
+// Blue
+$blue: map-get($colors, blue);

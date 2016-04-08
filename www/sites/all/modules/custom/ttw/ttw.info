@@ -1,0 +1,4 @@
+name = Talk the Walk
+description = Talk the Walk custom module
+package = Humus
+core = 7.x

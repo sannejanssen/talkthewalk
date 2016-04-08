@@ -1,6 +1,23 @@
-/*------------------------------------------------------------------
-[Lists]
--------------------------------------------------------------------*/
+/**
+ * Default list styling
+ */
+
+%list-inline {
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+  }
+}
+
+ul {
+
+}
+
+
+
+
 /*
 dl {
   margin-bottom: $small-spacing;

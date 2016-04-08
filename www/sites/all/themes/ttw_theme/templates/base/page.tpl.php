@@ -86,13 +86,12 @@
     </div>
   </header>
 
-
   <?php if ($messages): ?>
-    <section class="messages">
-      <div class="container">
+    <div class="container">
+      <section class="drupal-messages">
         <?php print $messages; ?>
-      </div>
-    </section>
+      </section>
+    </div>
   <?php endif; ?>
 
   <section style="display: none;" class="main-content">
@@ -106,6 +105,16 @@
   </section>
 
   <section class="main-content">
+  <?php if (!empty($tabs)): ?>
+        <?php print render($tabs); ?>
+        <?php if (!empty($tabs2)): print render($tabs2); endif; ?>
+      <?php endif; ?>
+
+      <?php if ($action_links): ?>
+        <ul class="action-links">
+          <?php print render($action_links); ?>
+        </ul>
+      <?php endif; ?>
     <?php print render($page['content']); ?>
   </section>
 

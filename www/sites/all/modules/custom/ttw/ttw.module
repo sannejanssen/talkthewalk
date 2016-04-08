@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * Retrieves all fieldable_panels_pane bundles available.
+ */
+
+/*
+function ttw_fieldable_panels_pane_bundles() {
+
+  $list = array();
+
+  $list['cta'] = array(
+    'label' => t('Call to Action'),
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/cta',
+      'access arguments' => array('administer Call-to-Actions'),
+    ),
+  );
+
+  return $list;
+
+}
+
+/*
+function ttw_fieldable_panels_pane_bundles() {
+
+  $list = array();
+
+  $list['jump_to'] = array(
+    'label' => t('Jump-to widget'),
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/jump-to',
+      'access arguments' => array('administer Call-to-Actions'),
+    ),
+  );
+
+  // A quote has a person, his title and a quoted text.
+  /*
+  $list['quote'] = array(
+    'label' => t('Quote'),
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/quote',
+      'access arguments' => array('administer Call-to-Actions'),
+    ),
+  );
+
+  return $list;
+
+}
+
+*/
