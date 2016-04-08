@@ -1,0 +1,15 @@
+.region-top {
+  margin-bottom: 20px;
+}
+
+.region-main {
+  float: left;
+  width: 66%;
+  margin-bottom: 20px;
+}
+
+.region-aside {
+  float: right;
+  width: 30%;
+  margin-bottom: 20px;
+}

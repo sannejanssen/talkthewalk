@@ -20,3 +20,8 @@ stylesheets[print][] = dist/css/print.css
 
 ;-------------- js -------------
 scripts[] = dist/js/scripts.js
+
+; --------------------------------------------------------------------------
+; Panel layouts
+; --------------------------------------------------------------------------
+plugins[panels][layouts] = layouts
