@@ -78,7 +78,10 @@
   <header>
     <div class="container">
       <div class="language">LOGO</div>
-      <div class="language">LANGUAGE</div>
+      <div class="language">
+        LANGUAGE
+        <?php print render($page['language']); ?>
+      </div>
       <section class="navigation">NAVIGATION</section>
     </div>
   </header>
@@ -92,7 +95,7 @@
     </section>
   <?php endif; ?>
 
-  <section class="main-content">
+  <section style="display: none;" class="main-content">
     <h1>H1 Talk the walk  The node object, if there is an automatically-loaded node associated with the page, and the node ID is the second argument</h1>
     <p>B58 – Belgium 1958. Branded “Expo 58”, the 1958 World’s Fair in Brussels was the first of its kind after World War II, initiating an innovation boost that remains legendary even today. More than half a century after those course-changing days, we believe that our global society is again in need of truly inspirational, yet this tigme sustainable, growth trajectories.</p>
     <h2>H2 More than half a century after those course-changing days, we believe that our global society is again in need of truly inspirational, yet this tigme sustainable, growth trajectories</h2>
