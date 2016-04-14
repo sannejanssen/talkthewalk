@@ -77,14 +77,53 @@
 
   <header>
     <div class="container">
-      <div class="language">LOGO</div>
-      <div class="language">
-        LANGUAGE
-        <?php print render($page['language']); ?>
-      </div>
-      <section class="navigation">NAVIGATION</section>
+      <?php if ($logo): ?>
+        <figure class="logo">
+          <?php if($is_front): ?>
+            <img width="303" height="182" src="<?php print $logo; ?>" alt="<?php print t('Talk The Walk homepage'); ?>" />
+          <?php else: ?>
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
+              <img width="303" height="182" src="<?php print $logo; ?>" alt="<?php print t('Talk The Walk homepage'); ?>" />
+            </a>
+          <?php endif; ?>
+        </figure>
+      <?php endif; ?>
+
+      <?php if ($page['language']): ?>
+        <section class="language">
+          <?php print render($page['language']); ?>
+        </section>
+      <?php endif; ?>
+
+      <?php if ($page['navigation']): ?>
+        <section class="navigation">
+          <span class="mobile-toggle"><?php print t('Menu'); ?></span>
+          <?php print render($page['navigation']); ?>
+        </section>
+      <?php endif; ?>
     </div>
   </header>
+
+  <?php if (isset($header_image)): ?>
+    <div class="header-image">
+      <?php echo $header_image; ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if (!empty($tabs)): ?>
+    <div class="container">
+      <?php print render($tabs); ?>
+      <?php if (!empty($tabs2)): print render($tabs2); endif; ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if ($action_links): ?>
+    <div class="container">
+      <ul class="action-links">
+        <?php print render($action_links); ?>
+      </ul>
+    </div>
+  <?php endif; ?>
 
   <?php if ($messages): ?>
     <div class="container">
@@ -94,37 +133,19 @@
     </div>
   <?php endif; ?>
 
-  <section style="display: none;" class="main-content">
-    <h1>H1 Talk the walk  The node object, if there is an automatically-loaded node associated with the page, and the node ID is the second argument</h1>
-    <p>B58 – Belgium 1958. Branded “Expo 58”, the 1958 World’s Fair in Brussels was the first of its kind after World War II, initiating an innovation boost that remains legendary even today. More than half a century after those course-changing days, we believe that our global society is again in need of truly inspirational, yet this tigme sustainable, growth trajectories.</p>
-    <h2>H2 More than half a century after those course-changing days, we believe that our global society is again in need of truly inspirational, yet this tigme sustainable, growth trajectories</h2>
-    <p>B58 – Belgium 1958. Branded “Expo 58”, the 1958 World’s Fair in Brussels was the first of its kind after World War II, initiating an innovation boost that remains legendary even today. More than half a century after those course-changing days, we believe that our global society is again in need of truly inspirational, yet this tigme sustainable, growth trajectories.</p>
-    <h3>Another title</h3>
-    <p>B58 – Belgium 1958. Branded “Expo 58”, the 1958 World’s Fair in Brussels was the first of its kind after World War II, initiating an innovation boost that remains legendary even today. More than half a century after those course-changing days, we believe that our global society is again in need of truly inspirational, yet this tigme sustainable, growth trajectories.</p>
 
-  </section>
+
 
   <section class="main-content">
-  <?php if (!empty($tabs)): ?>
-        <?php print render($tabs); ?>
-        <?php if (!empty($tabs2)): print render($tabs2); endif; ?>
-      <?php endif; ?>
-
-      <?php if ($action_links): ?>
-        <ul class="action-links">
-          <?php print render($action_links); ?>
-        </ul>
-      <?php endif; ?>
     <?php print render($page['content']); ?>
   </section>
 
-  <footer>
+  <footer class="footer">
     <div class="container">
-      <div class="language">LOGO</div>
-      <div class="language">SERVICES</div>
-      <section class="navigation">NAVIGATION</section>
+      <div class="logo">LOGO</div>
+      <div class="services">SERVICES</div>
+      <div class="navigation">NAVIGATION</div>
     </div>
-
   </footer>
 
 </div>

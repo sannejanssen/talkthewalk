@@ -14,7 +14,7 @@ body {
 
 // Container example
 .container {
-  padding: 15px;
+  padding: 0 15px;
 
   @include outer-container();
 

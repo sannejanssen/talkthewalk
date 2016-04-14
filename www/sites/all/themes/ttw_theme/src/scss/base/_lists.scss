@@ -2,9 +2,12 @@
  * Default list styling
  */
 
-%list-inline {
-  padding: 0;
+%no-bullets {
   list-style: none;
+}
+
+%list-inline {
+  @extend %no-bullets;
 
   li {
     display: inline-block;
@@ -12,23 +15,10 @@
 }
 
 ul {
-
+  padding: 0;
 }
 
-
-
-
-/*
-dl {
-  margin-bottom: $small-spacing;
-
-  dt {
-    font-weight: 600;
-    margin-top: $small-spacing;
-  }
-
-  dd {
-    margin: 0;
-  }
+.menu {
+  @extend %no-bullets;
+  margin: 0;
 }
-*/

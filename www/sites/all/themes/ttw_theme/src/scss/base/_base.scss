@@ -15,13 +15,55 @@
   }
 }
 
-
 /**
  * Header
  */
-header {
-  background-color: $green;
+header {}
+
+/**
+ * Mobile container
+ */
+.mobile-container {
+  @include clearfix;
+  position: relative;
+
+  .mobile-toggle {
+    border: 3px solid red;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+  }
 }
+
+/**
+ * Logo
+ */
+.logo {
+  @include span-columns(5);
+  margin-top: 10px;
+}
+
+/**
+ * Language
+ */
+.language {
+  @include span-columns(7);
+  @include omega;
+}
+
+
+/**
+ * Navigation
+ */
+.navigation {
+  @include span-columns(12);
+  margin-top: 10px;
+  background-color: $green;
+  color: white;
+  position: relative;
+}
+
+
 
 /**
  * Footer

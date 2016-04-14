@@ -86,6 +86,31 @@ function wundertheme_preprocess_page(&$variables) {
   if (!empty($variables['logo'])) {
     $variables['logo'] = str_replace('.png', '.svg', $variables['logo']);
   }
+
+  /**
+   * Add header image for node pages from type
+   * - basic page
+   */
+
+  if (isset($variables['node'])) {
+    $node = $variables['node'];
+
+    if ($node->type == 'page') {
+      $image = field_get_items('node', $node, 'field_image');
+
+      if ($image) {
+        $variables['header_image'] = theme(
+          'image_style',
+          array(
+            'path' => $image[0]['uri'],
+            'style_name' => 'header',
+            'alt' => 'Alternate Text',
+            'title' => 'Title Text',
+          )
+        );
+      }
+    }
+  }
 }
 
 
