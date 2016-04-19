@@ -45,5 +45,41 @@
     .en a:after {
       content: 'ENG';
     }
+
+    @include media($small) {
+      margin-top: 10px;
+
+      a {
+        background: transparent;
+        color: $medium-gray;
+        font-size: 14px;
+        text-transform: none;
+        text-indent: 0;
+        padding: 0;
+        margin-right: 5px;
+
+        &:after {
+          content: '|' !important;
+          margin-left: 5px;
+        }
+      }
+
+      .last {
+        a {
+          margin-right: 0;
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+
+      .active {
+        a {
+          background: transparent;
+          color: $green;
+        }
+      }
+    }
   }
 }

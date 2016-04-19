@@ -97,7 +97,12 @@
 
       <?php if ($page['navigation']): ?>
         <section class="navigation">
-          <span class="mobile-toggle"><?php print t('Menu'); ?></span>
+
+          <div class="mobile-toggle">
+            <span class="label"><?php print t('Menu'); ?></span>
+            <span class="hamburger"><span></span></a>
+          </div>
+
           <?php print render($page['navigation']); ?>
         </section>
       <?php endif; ?>

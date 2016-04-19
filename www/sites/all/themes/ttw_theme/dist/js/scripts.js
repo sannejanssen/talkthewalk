@@ -1,7 +1,12 @@
 (function ($) {
-  Drupal.behaviors.example = {
+
+  Drupal.behaviors.mobileNavigation = {
     attach: function (context, settings) {
-      // js behavior
+      $(".mobile-toggle").click(function() {
+        $('.hamburger', $(this)).toggleClass('active');
+        $('.block-menu', $(this).parent()).slideToggle();
+      });
     }
   };
+
 }(jQuery));

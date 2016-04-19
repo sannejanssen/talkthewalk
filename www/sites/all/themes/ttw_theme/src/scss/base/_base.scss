@@ -18,20 +18,10 @@
 /**
  * Header
  */
-header {}
-
-/**
- * Mobile container
- */
-.mobile-container {
-  @include clearfix;
-  position: relative;
-
-  .mobile-toggle {
-    border: 3px solid red;
-    position: absolute;
-    bottom: 10px;
-    right: 0;
+header {
+  @include media($small) {
+    padding-bottom: 5px;
+    border-bottom: 4px solid $green;
   }
 }
 
@@ -41,6 +31,10 @@ header {}
 .logo {
   @include span-columns(5);
   margin-top: 10px;
+
+  @include media($small) {
+    @include span-columns(3);
+  }
 }
 
 /**
@@ -49,21 +43,24 @@ header {}
 .language {
   @include span-columns(7);
   @include omega;
-}
 
+  @include media($small) {
+    @include span-columns(9);
+    @include omega;
+  }
+}
 
 /**
  * Navigation
  */
 .navigation {
   @include span-columns(12);
-  margin-top: 10px;
-  background-color: $green;
-  color: white;
-  position: relative;
+
+  @include media($small) {
+    @include span-columns(9);
+    @include omega;
+  }
 }
-
-
 
 /**
  * Footer

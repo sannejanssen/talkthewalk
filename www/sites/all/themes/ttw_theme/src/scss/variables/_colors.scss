@@ -6,6 +6,7 @@ $colors: (
   black:            #000000,
   darkest-gray:     #2e2e2e,
   dark-gray:        #333333,
+  medium-gray:      #7c7c80,
   brown:            #2e2e2e,
   green:            #2aa3a5,
   blue:             #00435D,
@@ -23,3 +24,6 @@ $green: map-get($colors, green);
 
 // Blue
 $blue: map-get($colors, blue);
+
+// medium-gray
+$medium-gray: map-get($colors, medium-gray);
